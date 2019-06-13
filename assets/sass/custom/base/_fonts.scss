@@ -1,0 +1,28 @@
+// ######################################## //
+// ## FONTS.SCSS ## //
+// ######################################## //
+
+@font-face {
+    font-family: 'tondo-corp';
+    src: url('../fonts/tondo-corp');
+    src: url('../fonts/tondo-corp/tondo-corp-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato');
+    src: url('../fonts/lato/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/helvetica');
+    src: url('../fonts/helvetica/helvetica-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

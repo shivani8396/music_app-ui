@@ -1,0 +1,285 @@
+// ######################################## //
+// ## HOME.SCSS ## //
+// ######################################## //
+
+// container
+.container {
+    max-width: 100%;
+    
+    // On mobile
+    @include mobile {
+        max-width: auto       
+    }
+}
+
+// tabs
+.tab-pane {
+    padding: 2rem 0 2rem 3rem;
+    
+    // On mobile
+    @include mobile {
+        padding: 2rem 0;
+        
+    }
+}
+// header sec
+.header-sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    
+    // On mobile
+    @include mobile {
+        padding: 0 1rem;
+    }
+    
+    // right-sec
+    &.right {
+        align-items: flex-end;
+        
+        // On mobile
+        @include mobile {
+            align-items: center;
+        }
+        
+        // img
+        .header-img {
+            background-color: $white;
+        }
+    }
+    
+    // img
+    .header-img {
+        width: 48px;
+        height: 48px;
+        background-color: $theme-primary;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        background-position: center;
+        margin-right: 1rem;
+    }
+    
+    // text
+    .header-text {
+        
+        // title
+        .title {
+            font-size: 32px;
+            color: $theme-text;
+            margin: 0 0 2px;
+            
+            // On mobile
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+        
+        // subtitle
+        .subtitle {
+            color: $gray-3;
+            font-size: 16px;
+            margin: 0;
+            
+            // On mobile
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
+
+// sections
+.playlist-sec {
+    margin-bottom: 1.6rem;
+}
+
+// right section
+.right-sec {
+    position: relative;
+    background-color: $white;
+    padding-right: 1rem;
+    
+    // On mobile
+    @include mobile {
+        padding-right: 0;
+    }
+    
+    // title-small
+    .title-small {
+        font-size: 24px;
+        color: $theme-text;
+    }
+    
+    // body
+    .body-sec {
+        text-align: center;
+        
+        // On mobile
+        @include mobile {
+            padding: 0 1rem;
+        }
+        
+        // img section
+        .song-img {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 270px;
+            display: block;
+            padding: 0;
+            margin: 0.5rem 2rem 2rem 0;
+            border-radius: 7px;
+            box-shadow: 0 6px 6px 0 rgba($black, 0.08);
+            
+            // On mobile
+            @include mobile {
+                margin: 0.5rem 0 2rem 0;
+            }
+        }  
+        
+        // title-small
+        .subtitle-small {
+            font-size: 16px;
+            color: $theme-text;
+            
+            // On mobile
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+        
+        // timer-sec
+        .timer-sec {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            // label
+            .time-label {
+                color: $gray-9;
+                font-size: 14px;
+            }
+            
+            // input
+            .range-input {
+                // -webkit-appearance: none;
+                overflow: hidden;
+                width: 80%;
+                height: 3px;
+                margin-top: -8px;
+                background-color: $theme-primary;
+                
+                &::-webkit-slider-runnable-track {
+                    // appearance: none;
+                    width: 80%;
+                    height: 3px;                 
+                    color: $theme-primary;
+                }
+                
+                &::-webkit-slider-thumb {
+                    // appearance: none;
+                    z-index: 1;
+                    height: 3px;
+                    width: 3px;
+                    border-radius: 50%;
+                    border: 2px solid $theme-primary;
+                    background: $gray-9;
+                    cursor: pointer;
+                    margin-top: -6px;
+                    box-shadow: -80px 0 0 80px $theme-primary;
+                }
+                
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        
+        // controls-sec
+        .controls-sec {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1rem;
+            
+            // play pause
+            .play-control {
+                position: relative;
+                padding: 2rem;
+                border: 2.5px solid rgba($gray-d, 0.5);
+                border-radius: 50%;
+                background: $white;
+                outline: none;
+                cursor: pointer;
+                
+                .icon-center {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);                  
+                    width: 21px;
+                }
+            }
+            
+            // prev next
+            .side-control {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                
+                // icon
+                .icon-side {
+                    width: 15px;
+                    
+                    &.prev {
+                        margin-left: 2rem;
+                    }
+                    
+                    &.next {
+                        margin-right: 2rem;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    
+    // footer-sec
+    .footer-sec {
+        position: absolute;
+        bottom: 35px;
+        width: calc(100% - 4rem);
+        padding: 0 2rem;
+        margin: 0;
+        
+        @include mobile {
+            position: relative;
+            width: 100%;
+            margin: 5rem 0 0;
+        }
+        
+        // buton
+        .btn-cta {
+            background: $theme-primary;
+            color: $white;
+            text-align: center;
+            border-radius: 6px;
+        }
+        
+        // text-lato
+        .text-lato {
+            @include ff-secondary;
+            font-size: 16px;
+        }
+        
+        // text-logo
+        .text-logo {
+            @include ff-primary;
+            font-size: 20px;
+        }
+    }
+}

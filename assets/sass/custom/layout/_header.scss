@@ -1,0 +1,28 @@
+// ######################################## //
+// ## HEADER.SCSS ## //
+// ######################################## //
+
+// header mobile
+.nav {
+
+    // nav-item
+    .nav-item {
+        width: 50%;
+    }
+
+    // text
+    .nav-link {       
+        text-align: center;
+        border-radius: 0;
+        border: none;
+        color: $black;
+        background-color: $white;
+        
+
+        &.active {
+            color: $white;
+            background-color: $theme-primary;
+        }
+    }
+
+}

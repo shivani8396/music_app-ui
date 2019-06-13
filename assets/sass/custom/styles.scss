@@ -1,0 +1,31 @@
+
+// ######################################## //
+// ## STYLE.SCSS ## //
+// ######################################## //
+
+// Base
+@import "base/colors";
+@import "base/fonts";
+
+// Helpers
+@import "helpers/mixins";
+
+// Components
+@import "components/carousels";
+@import "components/buttons";
+@import "components/cards";
+
+// Extras
+@import "layout/xtras";
+
+// Layout
+@import "layout/body";
+@import "layout/header";
+@import "layout/footer";
+
+// Pages
+@import "pages/home";
+
+// Vendors
+@import "vendors/animate";
+

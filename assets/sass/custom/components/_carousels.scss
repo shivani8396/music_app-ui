@@ -1,0 +1,60 @@
+// ######################################## //
+// ## CARAUSELS.SCSS ## //
+// ######################################## //
+
+// carousel-cell
+.carousel-cell {
+  width: 22%; 
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: $white;
+
+  // On mobile
+  @include mobile {
+    width: 28%; 
+ }
+  
+  // cell-playlist
+  .cell-playlist {
+    height: 220px;
+  }
+  
+  // cell-movie
+  .cell-movie {
+    height: 260px;
+  }
+}
+
+// carousel dots
+.flickity-page-dots .dot {
+  display: none;
+}
+
+.flickity-button {
+  background: $white;
+  border-radius: 2px 68px 68px 2px;
+  width: 29px;
+  height: 31px;
+  
+  
+  .flickity-button-icon {
+    fill: $theme-primary;
+    left: 20%;
+    top: 30%;
+    width: 45%;
+    height: 45%;
+  }
+  
+  &.flickity-prev-next-button.previous {
+    left: 0;
+
+    svg {
+      transform: rotate(180deg);  
+    }
+  }
+  
+  &.flickity-prev-next-button.next {
+    right: 0;
+    transform: rotate(180deg);  
+  }
+}
